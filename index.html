@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    </head>
+    <body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=New+Tegomin&family=Permanent+Marker&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{    
+    font-size:62.5%;
+    overflow-y:scroll;
+    scroll-behavior:smooth;
+}
+body{
+    background-color:black;
+}
+section {
+  text-align: center;
+}
+.features {
+  background: #FFFFFF;
+  color: #000000;
+  padding:50vh 0;
+  background-image:url("https://images.unsplash.com/photo-1518281579100-d51bcf505b0e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Ym9va3MlMjBhbmNpZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=60");
+  background-size:100% 100%;
+  position:relative;
+  margin-top:5rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.ms{
+    position:absolute;
+    top:5%;
+    color:white;  
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:5rem;
+    font-weight:900;
+    text-shadow:0 0 1vmin #fff7;
+}
+.ms:before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:5.7rem;
+    border-bottom:2px solid hotpink;
+    animation:ms 5s linear both infinite;
+}
+@keyframes ms{
+    0%{
+        width:0;
+    }
+}
+.quote {
+  background:#549DA0;
+  color:#FFFFFF;
+  padding:3rem 0;
+}
+.ms span{
+    color: #ff1493;
+    transform-origin:top;
+    transform:rotate(5deg);
+}
+.about{
+    color:white;
+    width:90vw;
+    position:absolute;
+    top:20%;
+    font-size:1.7rem;
+    background-color:#0009;
+    clip-path:polygon(100% 0,0% 0%,0 80%,50% 100%,100% 80%);
+    padding:2rem;
+    padding-bottom:7rem;
+    font-family: 'New Tegomin', serif;
+    line-height:2rem;
+}
+
+.about span{
+    color: #ff1493;
+    font-size:4rem;
+    
+}
+
+.about em{
+    color:hotpink;
+    text-decoration:none;
+    font-style:normal;
+}
+
+.about i{
+    color: #ffcce7;
+    font-weight:400;
+}
+.about b{
+    color:hotpink;
+    font-weight:700;
+}
+.historical{
+    background-image:url("https://media.istockphoto.com/photos/image-of-open-antique-book-on-wooden-table-with-glitter-overlay-picture-id873507500?k=6&m=873507500&s=612x612&w=0&h=V-IZYnO0CEdox-omaIxWshTXa382pjYs_3fSgqnH65M=");
+    background-color:#0008;
+    background-size:100% 100%;
+    position:relative;
+}
+/*.historical:before{
+    position:absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    background-color:#0008;
+    top:0;
+    left:0;
+}*/
+.booksec{
+    display:block;
+    padding:3vw 3vw;
+}
+.cover{
+    position:absolute;
+    top:0;
+    height:100%;
+    width:100%;
+    background-color:#0008;
+    left:0;
+    
+}
+
+.h1{
+    color: #ff0088;
+    font-family: 'Dela Gothic One', cursive;
+    font-size:2.5rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    /*z-index:10;*/
+}
+.h1:before{
+    content:"";
+    position:absolute;
+    width:92%;
+    height:5.2rem;
+    border-bottom:2px solid hotpink;
+    animation:ms 5s linear both infinite;
+}
+
+.container{
+    height:100%;
+    width:100%;
+    margin-top:60px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+.card{
+    width:150px;
+    height:250px;
+    background-color:#000;
+    margin-top:30px;
+    position:relative;
+    display:grid;
+    place-items:center;
+}
+.imgbox{
+    position:absolute;
+    height:200px;
+    width:130px;
+    background-color:white;
+    margin-top:-80px;
+    z-index:10;
+    transition:all .5s linear;
+    transform-origin:top;
+}
+.imgbox img{
+    height:100%;
+    width:100%;
+}
+.content{
+    color:pink;
+    height:180px;
+    width:140px;
+    padding-top:3px;
+    background-color:#000;
+    font-size:1.2rem;
+    font-weight:900;
+    text-shadow:0 0 1vmin #fff7;
+    overflow:scroll;
+    z-index:1;
+    opacity:0;
+    padding-bottom:3px;
+    transition:all .5s linear;
+}
+.content h2{
+    font-size:1.5rem;
+    font-weight:900;
+    color:#07f7fe;
+    text-shadow:0 0 1vmin #fff7;
+    font-family:"Permanent Marker";
+}
+.content h5{
+    font-family:"Righteous";
+    color:#09fbd4;
+}
+.content p{
+    font-family:"New Tegomin";
+    border-bottom:2px double pink;
+    padding-bottom:3px;
+}
+.card:hover .imgbox{
+    height:80px;
+    margin-top:-200px;
+    transform:rotateX(30deg) perspective(600px);
+}
+.container .card:hover .content{
+    margin-top:70px;
+    opacity:1;
+}
+.card:hover .btn{
+    /*opacity:0;*/
+    background-color:#07f7fe;
+    transform:rotateX(90deg) perspective(600px);
+}
+.btn{
+    background-color:#09fbd4;
+    width:auto;
+    margin-bottom:10px;
+    z-index:10;
+    font-size:1.2rem;
+    transition:all .3s  linear;
+    padding:3px;
+    font-family:"Graduate";
+    font-weight:900;
+    box-shadow: 0 0 .5vmin .3vmin #2225;
+    border-radius:.5rem;
+    transform-origin:top;
+}
+
+sup{
+    font-weight:500;
+}
+.adventure{
+    background-image:url("https://images.pexels.com/photos/339805/pexels-photo-339805.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size:100% 100%;
+    position:relative;
+}
+
+.romance{
+    background-image:url("https://images.pexels.com/photos/1884326/pexels-photo-1884326.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size:100% 100%;
+    position:relative;
+}
+.mystery{
+    background-image:url("https://media.istockphoto.com/photos/photo-camera-notebook-hat-magnifier-paper-on-black-table-picture-id509861170?k=6&m=509861170&s=612x612&w=0&h=wrXJn_kL_gROq_fL1MT_EOd1uufjc0U1L_WieB-MlSM=");
+    background-size:100% 100%;
+    position:relative;
+}
+
+.horror{
+    background-image:url("https://images.pexels.com/photos/3993249/pexels-photo-3993249.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500L_WieB-MlSM=");
+    background-size:100% 100%;
+    position:relative;
+}
+
+.others{
+    background-image:url("https://media.istockphoto.com/photos/magical-old-book-with-sparkles-picture-id1070683626?b=1&k=6&m=1070683626&s=170667a&w=0&h=qb8ryuhY9y4fzsQ7XUf8gsIojAdl6xnATDuq7N3itOA=");
+    background-size:100% 100%;
+    position:relative;
+}
+
+.scifi{
+    background-image:url("https://cdn.pixabay.com/photo/2018/03/13/15/57/steampunk-3222894__480.jpg");
+    background-size:100% 100%;
+    position:relative;
+}
+
+.booksec{
+    background-color:#353535;
+}
+
+.quote{
+    background-color: #4d0029;
+    position:relative;
+}
+
+.quote p{
+    font-family:"Righteous";
+    font-size:2rem;
+}
+.quote cite{
+    font-family:"Righteous";
+    font-size:1.2rem;
+    font-weight:300;
+}
+
+.footer .hh1{
+    color: #ff0088;
+    font-family: 'Dela Gothic One', cursive;
+    font-size:2.5rem;
+    
+}
+.footer{
+    background-color:#000;
+    padding:10px 3px;
+    position:relative;
+}
+.line{
+    margin-top:10px;
+    width:100%;
+    border-top:2.2px solid hotpink;
+    border-bottom:2.2px double #fffbd0;
+}
+
+.conbox{
+    height:100%;
+    width:100%;
+    /*position:absolute;
+    left:2.5vw;
+    top:910vw;*/
+    background-color:#0005;
+    box-shadow:0 0 .5vmin .5vmin #fff3;
+    padding:10px;
+    outline:none;
+    margin-top:10px;
+}
+
+/*.mg{
+    position:absolute;
+    width:100%;
+}*/
+ .input, textarea {
+  background-color:transparent;
+  border-color:transparent;
+  height:30px;
+  border-bottom: 2px solid #ff1493;
+  color: #fff;
+  width: 90%;
+  margin-top:15px;
+  margin-left:5%;
+  color:#fff;
+  font-family: 'New Tegomin', serif;
+  outline:none;
+}
+
+/*textarea{
+  position:absolute;
+  width:68%;
+}*/
+
+.snd{
+    margin-top:10px;
+    width:80%;
+    margin-left:12%;
+}
+.snd:hover{
+    background-color:#0007;
+    color:hotpink;
+    box-shadow:0 0 .25vmin .25vmin #fff5;
+}
+::-webkit-input-placeholder {
+    color:#fff;
+    font-family: 'Graduate', serif;
+}
+.ebox{
+    width:95%;
+    margin-top:20px;
+    padding:5px;
+    font-family: 'Graduate', serif;
+    color:#fffbd0;
+    font-size:1rem;
+    text-align:left;
+    color: #fff;
+}
+.ebox b{
+    font-size:1rem;
+}
+.end{
+    background-color:#0002;
+    display:flex;
+    flex-direction:row;
+    place-items:center;
+    align-items:center;
+    justify-content:center;
+    font-family: 'New Tegomin', serif;
+    color:#fff;
+    font-size:1.2rem;
+    margin-top:10px;
+}
+
+.fa-shopping-cart{
+    color:#ff1493;
+    transform:rotate(-20deg);
+}
+header {
+  color: #FFFFFF;
+  background-color: #001;
+  width:100vw;
+  padding:7px 0;
+  text-align: center;
+  position:fixed;
+  z-index:15;
+  opacity:1;
+  top:0;
+  padding-bottom:7px;
+}
+.logo{
+    float:left;
+    font-size:2rem;
+    font-family: 'New Tegomin', serif;
+    padding-bottom:7px;
+    padding-left:7px;
+}
+
+.logo span{
+    color: #ff1493;
+    font-weight:900;
+    font-size:2.7rem;
+}
+.logo .fa{
+    color: #ff1493;
+    transform:perspective(600px) rotateZ(15deg) translateY(-3px);
+    
+}
+.ham:hover{
+    color:#ff1493;
+}
+.ham{
+    float:right;
+    font-size:3rem;
+    font-family: 'New Tegomin', serif;
+    padding-bottom:3px;
+    padding-right:10px;
+}
+.list{
+    display:none;
+    position:fixed;
+    top:67px;
+    left:49vw;
+    height:450px;
+    width:50vw;
+    background-color:#0018;
+    overflow:hidden;
+    box-shadow:0 0 0.2vmin 0.2vmin #eee3;
+}
+
+ul{
+     padding: 0px;
+     list-style: none;
+     overflow:hidden;
+     
+
+}
+li{
+      float:left;
+      backdrop-filter: blur( 20.0px );
+      color:#006600;
+      width:100%;
+      height:50px;
+      font-size:1.5rem;     
+      text-align: center;
+      font-weight: 700;
+      font-family: 'Graduate';
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      border-bottom:3px double #fff3;
+      color:#fffbd0;
+      letter-spacing:5px;
+      font-weight:900;
+}                 
+li:hover{
+    
+    color:#fff;
+    backdrop-filter: blur( 20.0px );
+    background-color:rgba(255,20,147,0.5);
+    font-weight:900;
+}
+a:hover{
+    color:#fff;
+    font-weight:900;
+}        
+li::before{
+    content: '';
+    width:100%;
+    height:150px;
+    background-color: ghostwhite;
+    position: absolute;
+    bottom: 0%;
+    left: 10%;
+    transform: translateX(150%) translateY(-250%) rotate(135deg);
+    transition: all .8s;
+    transform-origin: center;
+    
+  }
+  
+li:hover::before{
+    transform: translateX(-100%) translateY(-250%) rotate(135deg);
+    background-color:#fff3;
+    backdrop-filter: blur( 20.0px );
+  } 
+
+a{
+      text-decoration:none;
+      float:left;
+      backdrop-filter: blur( 20.0px );
+      width:100%;
+      height:50px;
+      font-size:1.5rem;     
+      text-align: center;
+      font-weight: 700;
+      font-family: 'Graduate';
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      border-bottom:3px double #fff3;
+      color:#ffcce7;
+      letter-spacing:5px;
+      font-weight:900;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.load{
+    height:100vh;
+    width:100vw;
+    background-color:#000;
+    z-index:1000;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.book{
+    position:absolute;
+    width:60vw;
+    height:60vw;
+    background-color:hotpink;
+    top:30%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+.bookp{
+    position:absolute;
+    width:50%;
+    height:100%;
+    background-color:hotpink;
+    border:10px solid white;
+}
+.p3{
+    right:0;
+    animation:flipl 1.5s linear both infinite;
+    transform-origin:left;
+}
+.p2{
+    right:0;
+}
+@keyframes flipl{
+    0%{
+        transform:perspective(600px) rotateY(-0deg);
+    }
+    80%{
+        background-color:#ff1493;
+    }
+    100%{
+        transform:perspective(300px) rotateY(-180deg);
+    }
+}
+
+.load .text{
+    position:absolute;
+    display:grid;
+    place-items:center;
+    width:90vw;
+    height:100px;
+    bottom:10%;
+    left:50%;
+    transform:translate(-50%, -90%);
+    font-size:3rem;
+    color:white;
+    font-weight:900;
+    letter-spacing:.4rem;
+    text-shadow:0 0 2vmin #ff1493;
+    animation: type 2s linear both infinite;
+    overflow:hidden;
+}
+
+@keyframes type{
+    0%{
+        width:0;
+    }
+}
+#loading{
+    position:fixed;
+}
+
+    </style>
+    <main id="dora">
+    <header class="header">
+      <div class="logo">
+          <i class="fa fa-book"></i>
+              
+          <span>M</span>aggi <span>S</span>helf
+      </div>
+      <div class="ham">
+                    <i class="fa fa-bars"></i>
+                </div><!--end of ham-->
+                <div class="list">
+                  <ul>
+                        <li><a href="#hm">Home</a></li>
+                        <li><a href="#hs">Historic</a></li>
+                        <li><a href="#adv">Adventure</a></li>
+                        <li><a href="#rom">Romance</a></li>
+                        <li><a href="#mys">Mystery</a></li>
+                        <li><a href="#hor">Horror</a></li>
+                        <li><a href="#sci">Sci Fi</a></li>
+                        <li><a href="#oth">Others</a></li>
+                        <li><a href="#cu">Contact Us</a></li>
+                    </ul>  
+                </div>
+    </header>
+    
+    <section class="features" id="hm">
+      <div class="ms"><span>M</span>AGGI &nbsp <span>S</span>HELF</div>
+      <div class="about"><span>"S</span>ince our modest beginnings in <b>2004</b> with a little space in <i>Ice Cream Mountains,</i> surrounded by cool breeze of <i>Chocolate River,</i> <b>Maggi Shelf</b> is trying its best to present the <i>untold</i> and <i>hidden stories</i> of past, the <i>thrilling adventures</i> of forgotten <i>heroes</i>, a series of <i> fascinating romances</i>, dark secrets of <i>mystery novels</i>, hair-rising chronicles of the <i>haunted houses</i> and much more.... <br>We offer the largest selection of <b>deeply discounted books</b> on the wholesale market worldwide, which means <i>great titles</i> on your shelves at a fraction of the cost. <br><br> <span>"</span> </div>
+    </section>
+    <section class="booksec historical" id="hs">
+    <div class="cover"></div>
+    <div class="h1">Era Of By Gone Times</div>
+        <div class="container">
+            <div class="card">
+                <div class="imgbox">
+                    <img src="https://cdn.pixabay.com/photo/2012/11/28/12/09/william-shakespeare-67768_1280.jpg">
+                </div>
+                
+                <div class="content">
+                    <h2>Hamlet</h2>
+                    <h5>William Shakespeare</h5>
+                    <p><br> A retelling of the travails of a Danish prince, first recorded by the monk Saxo Grammaticus around 1200, Shakespeare’s Hamlet is the epitome of the early modern man, a philosopher prince who cannot easily reconcile himself to the traditional codes of vengeance and warfare. Where Saxo’s Hamlet pretended to be mad in order to lay his plans for revenge against his uncle and successfully carried them out, Shakespeare’s retelling shows how the modern intellectual struggles to discover the truth, in the still-medieval world of the Danish court.</p>
+                </div>
+                <div class="btn">Buy for $1.2<br><sup>Click to know more</sup></div>
+            </div>
+            <div class="card">
+                <div class="imgbox">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIZfKSbzsIPelGC52ioLMc4Ded_qpKjKVzBBQL3nhtFArL07gF&s">
+                </div>
+                
+                <div class="content">
+                    <h2>The Name Of The Rose</h2>
+                    <h5>Umberto Eco</h5>
+                    <p><br> This dazzling first novel has brilliant plotting and witty in-jokes (its hero – played by Sean Connery in the film version – is William of Baskerville in a nod to the great detective), combined with a profound understanding of medieval intellectual history. How might medieval – and, indeed, our own culture – have been different if Aristotle’s lost second book of the Poetics, exploring the importance of comedy, had survived? Vividly explaining the primary political and theological questions of the 13th century, the novel finds a kind of sequel in Baudolino (2000), but it’s this one that I regularly reread. </p>
+                </div>
+                <div class="btn">Buy for $1.5<br><sup>Click to know more</sup></div>
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc0MxpJSK6MzvFDUrt2yIvHWTBNhqTPyjM_w&usqp=CAU">
+                </div>
+                <div class="content">
+                    <h2>The World Of Ice And Fire</h2>
+                   <h5>George R.R Martin</h5> 
+                    <p><br> The great fantasy sequence of the 21st century, Martin’s series is rooted in a world that is largely that of medieval Europe and Asia, with added dragons, giants, supernatural ice monsters and the undead. Martin has thought long and hard about such topics as the medieval banking system, the success of Mongol horse-lords, the nature of chivalry, the limitations of queenship, and the organisation of military forces, in his exploration of medieval power politics in a world where magic finds a role.</p>
+                </div>
+               <div class="btn">Buy for $1<br><sup>Click to know more</sup></div> 
+                </div>
+        <div class="card">
+                <div class="imgbox">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSju-mWAQnVXZO0f8kol3SNtDXhZDjMUTd8kw&usqp=CAU">
+                </div>
+                <div class="content">
+                    <h2>The Leper's Companions</h2>
+                   <h5>Julia Blackburn</h5> 
+                    <p><br> This is a slender fable about a village where a mermaid washes up on the beach, then vanishes, and where a leper persuades many of the villagers to make a pilgrimage with him to Jerusalem. Drawing on medieval pilgrim accounts, folkloric beliefs about mermaids, and meditating deeply on the human condition when stripped down to its barest form, this is beautifully written and vividly imagined.</p>
+                </div>
+               <div class="btn">Buy for $1.3<br><sup>Click to know more</sup></div> 
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxLrFY3decf5Jyw-_yv2ems5tA_2b4Q_z9eXIFVhvRERw4ViC_&s">
+                </div>
+                <div class="content">
+                    <h2>The Wake</h2>
+                   <h5>Paul Kingsnorth</h5> 
+                    <p><br> Anglo-Saxon scholars either love or hate Kingsnorth’s evocation of the shocking horrors brought about by the imposition of Norman rule on the fenlands of eastern England. In ironic dialogue with the legend of the English resistance hero Hereward the Wake, it is written in a reimagined language which, almost without exception, uses only words that occurred in Old English. Buccmaster, the book’s protagonist, turns back to the old gods when his life is shattered; but his rage renders him as monstrous as his antagonists.</p>
+                </div>
+               <div class="btn">Buy for $1.8<br><sup>Click to know more</sup></div> 
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYZMcYk-foe-b-4JWJV4FI_nIlDA6euQ9OZg&usqp=CAU">
+                </div>
+                <div class="content">
+                    <h2>The Warriors</h2>
+                   <h5>Halldór Laxness</h5> 
+                    <p><br> This is a slender fable about a village where a mermaid washes up on the beach, then vanishes, and where a leper persuades many of the villagers to make a pilgrimage with him to Jerusalem. Drawing on medieval pilgrim accounts, folkloric beliefs about mermaids, and meditating deeply on the human condition when stripped down to its barest form, this is beautifully written and vividly imagined.</p>
+                </div>
+               <div class="btn">Buy for $1.6<br><sup>Click to know more</sup></div> 
+                </div>
+         </div>       
+    </section>
+<!-------------------------------------------->
+<!-------------------------------------------->
+     <section class="booksec adventure" id="adv">
+    <div class="cover"></div>
+    <div class="h1">Dark Ages Of Heroes</div>
+        <div class="container">
+            <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/51UJsfRHTRL.jpg">
+                </div>
+                
+                <div class="content">
+                    <h2>The Three Musketeers</h2>
+                    <h5>Alexandre Dumas</h5>
+                    <p><br> In this classic by Dumas, a young man named d’Artagnan joins the Musketeers of the Guard. In doing so, he befriends Athos, Porthos, and Aramis — the King’s most celebrated musketeers — and embarks on a journey of his own.</p>
+                </div>
+                <div class="btn">Buy for $1.4<br><sup>Click to know more</sup></div>
+            </div>
+            <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/61Nvv+LTdeL.jpg">
+                </div>
+                
+                <div class="content">
+                    <h2>Treasure Island</h2>
+                    <h5>Robert Louis</h5>
+                    <p><br> Written by Scottish author Robert Louis Stevenson, this story of “buccaneers and buried gold” launched a million tropes of treasure maps, sea chests, Black Spots, and deserted islands. </p>
+                </div>
+                <div class="btn">Buy for $1.3<br><sup>Click to know more</sup></div>
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328864746l/1086164.jpg">
+                </div>
+                <div class="content">
+                    <h2>Journey to the Center of the Earth</h2>
+                   <h5>Jules Verne</h5> 
+                    <p><br> Journey to the Center of the Earth is exactly that: a trip to the inside of the world, which is where German professor Otto Lidenbrock theorizes that volcanic tubes will lead. Another one of Jules Verne’s magnum opuses — and one of the most famous examples of subterranean fiction.</p>
+                </div>
+               <div class="btn">Buy for $1<br><sup>Click to know more</sup></div> 
+                </div>
+        
+        <div class="card">
+                <div class="imgbox">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1309203605l/7126.jpg">
+                </div>
+                <div class="content">
+                    <h2>The Count of Monte Cristo</h2>
+                   <h5>Alexandre Dumas</h5> 
+                    <p><br> Part adventure story and part revenge thriller, The Count of Monte Cristo is the tale of Edmond Dantès, a man who is falsely imprisoned without trial in an island fortress off France. That is, until one day he escapes and seeks out the men who conspired against him. You’ll find yourself coming for the adventure, but staying for the vindication.</p>
+                </div>
+               <div class="btn">Buy for $1<br><sup>Click to know more</sup></div> 
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/61nkEgnbf2L.jpg">
+                </div>
+                <div class="content">
+                    <h2>Tarzan of the Apes</h2>
+                   <h5>Edgar Rice</h5> 
+                    <p><br> Immortalized by the Disney adaptation, Tarzan of the Apes by Edgar Rice Burroughs launched the legend of an orphaned boy who is adopted by apes in the African jungle. Named Tarzan, the boy eventually has to prove himself on two fronts: the animal kingdom and the even more menacing world of humans.</p>
+                </div>
+               <div class="btn">Buy for $1.9<br><sup>Click to know more</sup></div> 
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/51AuG91eHEL.jpg">
+                </div>
+                <div class="content">
+                    <h2>The Jungle Book</h2>
+                   <h5>Rudyard Kipling</h5> 
+                    <p><br> Rudyard Kipling published this book in 1894 as a collection of stories about a “man-cub” Mowgli who grows up with wolves in the forest. Here’s your chance to meet the original conceptions of these beloved characters yourself: from Baloo the bear to Bagheera the black panther and the villainous tiger Shere Khan.</p>
+                </div>
+               <div class="btn">Buy for $1.8<br><sup>Click to know more</sup></div> 
+                </div>
+         </div>       
+    </section>
+    <!-------------------------------------------->
+<!-------------------------------------------->
+     <section class="booksec romance" id="rom">
+    <div class="cover"></div>
+    <div class="h1">Saga Of Love Begins</div>
+        <div class="container">
+            <div class="card">
+                <div class="imgbox">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/41kNNH43YzL._AC_SY580_FMwebp_.jpg">
+                </div>
+                
+                <div class="content">
+                    <h2>I Am Dead But My Heart Beats</h2>
+                    <h5>Priyank</h5>
+                    <p><br> I AM DEAD BUT MY HEART BEATS is a fascinating saga of love, education, community, hatred, sacrifices and hope. It's about four youngsters from different communities speaking different languages - Aryan, Anshika, Zahid and Swati. Get ready for a heart-breaking journey of a complete real life story.</p>
+                </div>
+                <div class="btn">☆Buy for $2k♡<br><sup>Click to know more</sup></div>
+            </div>
+            <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/41SKiWj3LQL.jpg">
+                </div>
+                
+                <div class="content">
+                    <h2>Anna Karenina</h2>
+                    <h5>Leo Tolstoy</h5>
+                    <p><br> A sprawling epic that takes readers across continents in the name of love, Anna Karenina is one of the longest books on this list, coming to an intimidating 800+ pages. But those who persevere with this colossus of a novel are richly rewarded. In what is considered by many to be the best romance novel of all time, Tolstoy tells the story of an extramarital affair and its fallout in Imperial Russian society.  When Anna runs away with the handsome Count Vronsky, excitement gives way to paranoia, isolation, and regret, as we witness the unravelling of their relationship, and of Anna herself. As much a cautionary tale as it is a romance novel, Anna Karenina is a richly imagined portrait of both the agonies and ecstasies of love.</p>
+                </div>
+                <div class="btn">Buy for $1.3<br><sup>Click to know more</sup></div>
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/41+HorgT4YL.jpg">
+                </div>
+                <div class="content">
+                    <h2>Love in the Time of Cholera</h2>
+                   <h5>Gabriel Garcia</h5> 
+                    <p><br> Florentino Ariza has been waiting for 50 years for his true love to return. That’s not to say he’s been bored: he’s passed the time by having no fewer than 622 love affairs, which he has painstakingly recorded in his notebooks. Despite his dalliances and the passing of decades, when the man who married his childhood sweetheart dies, a now elderly Florentino seizes the opportunity to declare his love once more. An astonishing exploration of devotion and reunions, and the unrealistic expectations we place on those we love, Love in the Time of Cholera doesn’t just ask whether the hero will get the girl — it asks whether he should. They don’t just hand out the Nobel Prize for Literature to anyone, so it’s safe to say we’re in good hands with Gabriel Garcia Marquez.</p>
+                </div>
+               <div class="btn">Buy for $1.8<br><sup>Click to know more</sup></div> 
+                </div>
+        
+        <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/51s2Sl4NIxL.jpg">
+                </div>
+                <div class="content">
+                    <h2>Pride and Prejudice</h2>
+                   <h5>Jane Austen</h5> 
+                    <p><br> It is a truth universally acknowledged that any list of the best romance novels must be in want of at least one Jane Austen title. Pride and Prejudice is by far the English humorist’s most famous story. It’s a tale as old as time: boy meets girl; boy and girl bicker and declare their contempt for one another; boy and girl realise over time that there is, in fact, more to one another than meets the eye — but has this realisation come too late? It might now be a rom-com trope, but Pride and Prejudice is one of the oldest and greatest examples of the thin line between love and hate. Elizabeth and Darcy’s romance is as honest as it is unexpected, and Austen’s characters are so vividly realised and so utterly believable that you’ll be gasping, cringing, and crying along with them.</p>
+                </div>
+               <div class="btn">Buy for $2<br><sup>Click to know more</sup></div> 
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/51vA-sXEa5L.jpg">
+                </div>
+                <div class="content">
+                    <h2>The Princess Bride</h2>
+                   <h5>William Goldman</h5> 
+                    <p><br> As Goldman himself writes in the introduction, “dollars to donuts you’ve seen the movie”. But if you haven’t read the book that inspired the cult hit, you’ve missed a trick. A spoof fairy tale, a sharp satire, and a rocket-powered fantasy, all brilliantly disguised as a love story — there’s absolutely nothing fluffy about The Princess Bride. In fact, though there’s plenty to giggle about in the story of Buttercup and Prince Humperdink, you might also call this novel a tightly-plotted thriller. So if you’re of a nervous disposition, maybe stick to fairy tales meant for kids.</p>
+                </div>
+               <div class="btn">Buy for $2.2<br><sup>Click to know more</sup></div> 
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1572098085l/18135.jpg">
+                </div>
+                <div class="content">
+                    <h2>Romeo and Juliet</h2>
+                   <h5>William Shakespeare</h5> 
+                    <p><br> The quintessential love story that has spawned countless retellings and inspired who knows how many writers, Shakespeare’s Romeo and Juliet —  the story of two star-crossed lovers from rival houses — wrote many of the rules of tragic romance. From iconic scenes like the balcony soliloquy, to legendary one-liners (“A plague o’ both your houses”, anyone?), and the ending that defined the romantic tragedy genre, any aspiring romance connoisseur should get this one under their belt.</p>
+                </div>
+               <div class="btn">Buy for $3<br><sup>Click to know more</sup></div> 
+                </div>
+         </div>       
+    </section>
+    <!-------------------------------------------->
+<!-------------------------------------------->
+     <section class="booksec mystery" id="mys">
+    <div class="cover"></div>
+    <div class="h1">Darkest Mysteries</div>
+        <div class="container">
+            <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/41l02vDN4pL.jpg">
+                </div>
+                
+                <div class="content">
+                    <h2> And Then There Were None</h2>
+                    <h5>Agatha Christie</h5>
+                    <p><br> The story follows ten people who are brought together, for various reasons, to an empty mansion on an island. The mysterious hosts of this strange party are not present, but left instructions for two of the ten to tend the house as the housekeeper and cook. As the days unfold in accordance with the lyrics of a nursery rhyme, each invitee is forced to face the music (literally) and bear the consequences of their troubling pasts, as death will come for them one by one. </p>
+                </div>
+                <div class="btn">Buy for $1.5<br><sup>Click to know more</sup></div>
+            </div>
+            <div class="card">
+                <div class="imgbox">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1371584712l/2052.jpg">
+                </div>
+                
+                <div class="content">
+                    <h2>The Big Sleep</h2>
+                    <h5>Raymond Chandler</h5>
+                    <p><br> The Big Sleep is no ordinary story: private eye Philip Marlowe gets hired to investigate the blackmailing of Carmen Sternwood, the second daughter of a wealthy general. The further he digs into this messy business, the more complicated the story gets, as Carmen continues to be blackmailed by others in a web of unexpected relations between the characters. Chandler’s work is complex: his characters are multi-faceted and his language rich with premonitions of the tragedy about to fall on this family. While the signs he drops are not exactly there to help you find out “who done it”, it will definitely give you a foreboding awareness that makes it hard to put the book down. </p>
+                </div>
+                <div class="btn">Buy for $1.8<br><sup>Click to know more</sup></div>
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/414FyC8BAuL.jpg">
+                </div>
+                <div class="content">
+                    <h2>Gone Girl</h2>
+                   <h5>Gillian Flynn</h5> 
+                    <p><br> Perhaps better known by its major motion picture adaptation, Gone Girl is the ultimate mystery puzzle for the modern media age. Devoted wife Amy’s sudden disappearance throws Nick Dunne into a hailstorm of suspicion — from her parents to his neighbours to the investigators, everyone leans towards believing that he is somehow responsible. Nick himself becomes aware of how his wife viewed him, as well as how little he knows of her, when stories of her emerge from friends he’s never heard of. Even if you’ve failed to keep the media buzz regarding the movie adaptation from spoiling you, the experience of reading the minds of these unreliable narrators is well-worth picking this one up. </p>
+                </div>
+               <div class="btn">Buy for $2<br><sup>Click to know more</sup></div> 
+                </div>
+        
+        <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/418byl8zkqL.jpg">
+                </div>
+                <div class="content">
+                    <h2>Woman in White</h2>
+                   <h5>Wilkie Collins</h5> 
+                    <p><br> This Wilkie Collins’s late Victorian novel is among the earliest psychological thrillers ever written. It follows what first appears to be a simple story of two star-crossed lovers — Walter Hartright and Laura Fairlie — who weren’t meant to be together. Laura was betrothed to Sir Percival Glyde and yet she was mysteriously warned not to proceed with the marriage. Meanwhile, the city is gripped by the story of a strange woman clad in white who’s roaming its dark street.
+
+As the title suggests, this final character is the key to the mystery that will enshroud these characters. Set in dimly-lit streets, The Woman in White is as much Gothic horror as it is mystery book, and that’s precisely why the clarity you get when the riddle is solved is so incredibly satisfying. 
+
+</p>
+                </div>
+               <div class="btn">Buy for $2.2<br><sup>Click to know more</sup></div> 
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/51tLG3pRI0L.jpg">
+                </div>
+                <div class="content">
+                    <h2>The Silence of the Lambs</h2>
+                   <h5>Thomas Harris</h5> 
+                    <p><br> In this iconic suspense novel, FBI agent Clarice Stirling investigates a serial killer, “Buffalo Bill,” who preys on young women, and who potentially is linked to psychiatrist and cannibalistic murderer Hannibal Lecter. In order to weed a clue out from Lecter about Bill’s whereabouts, Stirling visits the psych ward where Lecter is imprisoned. However, her shuddering exchanges seem to reveal less about the killer on the loose, and more about Lecter’s astounding ability to get into the head of his victims. Follow Clarice Stirling on her bone-chilling mission, juggling two sociopathic criminals, in The Silence of the Lambs.</p>
+                </div>
+               <div class="btn">Buy for $1.6<br><sup>Click to know more</sup></div> 
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/51HWAKr+doL.jpg">
+                </div>
+                <div class="content">
+                    <h2>Case Histories</h2>
+                   <h5>Kate Atkinson</h5> 
+                    <p><br> If you still are in need of a good domestic thriller, Case Histories is your book. Get ready for three gruesome backyard tales: the disappearance of a young child in one home, the slaughter of a husband in another, and the murder of a solicitor’s daughter in the last. Beyond exploring the hurt and loss of each of these unfortunate families, Kate Atkinson also expertly tied all three together — how exactly, you’ll have to read to find out. </p>
+                </div>
+               <div class="btn">Buy for $1.3<br><sup>Click to know more</sup></div> 
+                </div>
+         </div>       
+    </section>
+    <!-------------------------------------------->
+<!-------------------------------------------->
+     <section class="booksec horror" id="hor">
+    <div class="cover"></div>
+    <div class="h1">Midnight Secrets</div>
+        <div class="container">
+            <div class="card">
+                <div class="imgbox">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1493497528l/589836.jpg">
+                </div>
+                
+                <div class="content">
+                    <h2> Coraline</h2>
+                    <h5>Neil Gaiman</h5>
+                    <p><br> There’s a mysterious door in Coraline’s new house. The neighbors all warn her that she shouldn’t open it under any circumstances… but Coraline never was a girl who listened to other people’s advice. From the mind of the bestselling author who brought you American Gods and Neverwhere comes a novel of wondrous and chilling imagination. Coraline is one of the staples in Gaiman’s remarkable oeuvre for a reason. </p>
+                </div>
+                <div class="btn">Buy for $1.6<br><sup>Click to know more</sup></div>
+            </div>
+            <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/51ZX0NslnyL.jpg">
+                </div>
+                
+                <div class="content">
+                    <h2>Dracula</h2>
+                    <h5>Bram Stoker</h5>
+                    <p><br> Meet the most famous vampire of all time. Dracula was born out of Bram Stoker’s imagination over a century ago — yet he still lives on today in our collective consciousness. Dracula is his story, one in which he roams from Transylvania to England to spread the curse of the undead amongst innocents. More than a simple tale about vampirism, Dracula is an era-defining masterwork about sexuality, technology, superstition, and an ancient horror that’s too terrible for words. </p>
+                </div>
+                <div class="btn">Buy for $1.7<br><sup>Click to know more</sup></div>
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/51gyXcg1P2L.jpg">
+                </div>
+                <div class="content">
+                    <h2>The Haunting of Hill House</h2>
+                   <h5>Shirley Jackson </h5> 
+                    <p><br> You know how some people say that the setting is almost like another character in the story? Well, in the case of this spooky classic, that’s the literal truth. When a parapsychologist invites a group of volunteers to stay at an old mansion with a bloody mystery, he hopes to uncover evidence of the supernatural. As the tension ratchets up, each of the guests is confronted by inexplicable phenomena. Listed by Stephen King as one of the best horror books of the 20th century, The Haunting of Hill House is a must-read for any fan of the genre. </p>
+                </div>
+               <div class="btn">Buy for $1.2<br><sup>Click to know more</sup></div> 
+                </div>
+        
+        <div class="card">
+                <div class="imgbox">
+                    <img src="https://rukminim1.flixcart.com/image/850/850/jpsnma80/book/3/5/4/psycho-original-imafbyhbhedxgzkf.jpeg?q=20">
+                </div>
+                <div class="content">
+                    <h2>Psycho</h2>
+                   <h5>Robert Bloch</h5> 
+                    <p><br> If you’re into horror, you’re no stranger to Psycho. But let’s recap one of the best horror plots of all time anyway: inspired by the real-life story of psychotic murderer Ed Gein, Norman Bates and his Mother own the Bates motel, with the unlit neon sign out front. When a woman checks into the motel one night, Norman can’t help but spy on her. Displeased, Mother plans to rectify her son’s behaviour by eliminating the woman, and anything that might purge Norman of his dark thoughts.
+
+</p>
+                </div>
+               <div class="btn">Buy for $1.7<br><sup>Click to know more</sup></div> 
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/41Cefw2DH1L.jpg">
+                </div>
+                <div class="content">
+                    <h2>The Case Against Satan</h2>
+                   <h5>Ray Russell</h5> 
+                    <p><br> Bearing strong superficial resemblance to a certain classic, Russell’s novel also features a pair of priests tasked with examining a young girl who may be possessed by the devil. Between The Case Against Satan, The Exorcist and Rosemary’s Baby, contemporary readers can sense a Catholic-tinged fear of the devil pervading through American horror of the 60s. If you like the other two, why not give this one a chance?</p>
+                </div>
+               <div class="btn">Buy for $1.3<br><sup>Click to know more</sup></div> 
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1312043022l/818433.jpg">
+                </div>
+                <div class="content">
+                    <h2>Hell House</h2>
+                   <h5>Richard Matheson</h5> 
+                    <p><br> In Hell House, the I am Legend scribe reaches terrifying new heights by expertly combining his flair for suspense with an intuitive eye for horror. The story opens on a dying millionaire who pays $100,000 each to a physicist and two mediums for them to retrieve “proof” of life after death. The group’s plan: travel to Maine and spend the week in the Belasco House, the most haunted house in the world. Whether any of them make it out alive — without going mad — is another question altogether.
+
+If you don’t trust us, believe Stephen King, who once said: “Hell House is the scariest haunted house novel ever written. It looms over the rest the way the mountains loom over the foothills.”
+
+ </p>
+                </div>
+               <div class="btn">Buy for $3<br><sup>Click to know more</sup></div> 
+                </div>
+         </div>       
+    </section>
+        
+<!-------------------------------------------->
+<!-------------------------------------------->
+     <section class="booksec scifi" id="sci">
+    <div class="cover"></div>
+    <div class="h1">World Of Science</div>
+        <div class="container">
+            <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/51V3fk728LL.jpg">
+                </div>
+                
+                <div class="content">
+                    <h2> The Time Machine</h2>
+                    <h5>H.G. Wells </h5>
+                    <p><br> The Time Machine is often credited as the work that sparked the concept of time travel via a — drum roll please — time machine! In this seminal novel that launched H.G. Wells’ career, a time travelling explorer visits a future 800,000 years away. Instead of an encountering an advanced and superior society, he finds that Earth is dying and the races that still inhabit it are at war. In order to return home, he’ll have to explore the tunnels where the sinister Morlocks live — and discover the darker side of human nature.</p>
+                </div>
+                <div class="btn">Buy for $2.3<br><sup>Click to know more</sup></div>
+            </div>
+            <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/41ABwNpkgNL.jpg">
+                </div>
+                
+                <div class="content">
+                    <h2>The Martian Chronicles</h2>
+                    <h5>Ray Bradbury</h5>
+                    <p><br> While science fiction authors of the Jet Age were busy imagining what it would be like if Martians invaded Earth, Ray Bradbury was working with a more plausible premise: that we’d be the ones invading Mars. More of a loose collection of stories than a novel united by a central narrative, the vignettes in The Martian Chronicles chart the violent conflict between colonizers and natives of the Red Planet.</p>
+                </div>
+                <div class="btn">Buy for $1.4<br><sup>Click to know more</sup></div>
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/41ED86iNFkL.jpg">
+                </div>
+                <div class="content">
+                    <h2> I, Robot </h2>
+                   <h5>Isaac Asimov </h5> 
+                    <p><br> You’ve probably seen the I, Robot film starring Will Smith, but you should still read the novel — and now more than ever. In this single title, Asimov basically defined his generation’s perception of robots: that they should serve, but never surpass or disobey, humans. This “fix-up” novel is comprised of short stories and essays that detail the origin and development of robots — some of which are mad, and others which have political aspirations or just enjoy a good joke — and humanity’s complex relationship with its own creations.</p>
+                </div>
+               <div class="btn">Buy for $1.7<br><sup>Click to know more</sup></div> 
+                </div>
+        
+        <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/51yOS9gR1HL.jpg">
+                </div>
+                <div class="content">
+                    <h2>Childhood’s End</h2>
+                   <h5>Arthur C. Clarke</h5> 
+                    <p><br> A gorgeous, glorious retelling of Snow White unlike any we’ve seen before. It’s the story of Mina, a queen with a heart made of glass, and Lynet, a girl built from snow to be the literal image of her dead mother. This feminist tale of their rivalry and the choices they’re forced to make by circumstance will upend everything you thought you knew about one of the most classic fairy tales of all time.
+</p>
+                </div>
+               <div class="btn">Buy for $1.7<br><sup>Click to know more</sup></div> 
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/31d1DpgbLfL.jpg">
+                </div>
+                <div class="content">
+                    <h2>Solaris by</h2>
+                   <h5>Stanislaw Lem</h5> 
+                    <p><br> Thief of Cahraman is a gender-bent take on Aladdin. In Lucy Tempest's version, the young hero is Adelaide, a thief who's been stolen away by a witch and made to assume the life of a noblewoman in order to enter a competition for the Prince’s hand. Except, oh yeah, the competition is just a way to get inside the palace for a heist, and the cost of failure is certain death. Add in a love story with another charming thief, setups for future retellings of both Cinderella and Beauty and the Beast, and a twist ending that will leave you clamoring for the sequel, and it’s no wonder this book gets such consistently high reviews.</p>
+                </div>
+               <div class="btn">Buy for $1.3<br><sup>Click to know more</sup></div> 
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://m.media-amazon.com/images/I/31bNBTT29nL.jpg">
+                </div>
+                <div class="content">
+                    <h2>Do Androids Dream of Electric Sheep?  </h2>
+                   <h5>Philip K. Dick</h5> 
+                    <p><br> 1968 was a big year for sci-fi books that became cult films — this one served as the basis for Blade Runner. Dick’s philosophically titled Do Androids Dream of Electric Sheep? introduces us to a world in which androids must serve emigrant humans from Earth, which has been ravaged by a nuclear holocaust. These androids are near-identical to humans in almost every way — think the moral quandaries of Westworld — and consequently, many dream not of electric sheep, but of escaping to Earth and to freedom. Now enter our protagonist, Rick Deckard: a bounty hunter hired to track down and dispose of the androids, all so he can make enough money to buy himself a real live sheep. Sound intriguing? We won’t spoil the rest for you, but trust us that it’s an existential doozy.
+
+ </p>
+                </div>
+               <div class="btn">Buy for $1.8<br><sup>Click to know more</sup></div> 
+                </div>
+         </div>       
+    </section> 
+<!-------------------------------------------->
+<!-------------------------------------------->
+     <section class="booksec others" id="oth">
+    <div class="cover"></div>
+    <div class="h1">House Of Books</div>
+        <div class="container">
+            <div class="card">
+                <div class="imgbox">
+                    <img src="https://images-cdn.reedsy.com/discovery/image/1036/image/medium_5196b9becc735fde4ed0f96198f75d3c320d547d.jpg">
+                </div>
+                
+                <div class="content">
+                    <h2> Uprooted</h2>
+                    <h5>Naomi Novik</h5>
+                    <p><br> It follows the course of Agnieszka, a girl whose village is protected by a mysterious wizard called the Dragon. This protection comes with a high price that, this time, falls on Agnieszka to pay. Against her wishes, she is sent to live with the Dragon, who soon finds himself with more on his hands than he bargained for. If you like enchanting tales about dark woods, ancient wizards battling cruel magic, and just a touch of Beauty-and-the-Beast romance, this book is for you. </p>
+                </div>
+                <div class="btn">Buy for $1.3<br><sup>Click to know more</sup></div>
+            </div>
+            <div class="card">
+                <div class="imgbox">
+                    <img src="https://images-cdn.reedsy.com/discovery/image/1037/image/medium_42c2044b1c683a384d365dec2127fb9b8ba47fd7.jpg">
+                </div>
+                
+                <div class="content">
+                    <h2>The Near Witch </h2>
+                    <h5>V.E. Schwab</h5>
+                    <p><br> MThis is a story of whispers in the night, of old legends that may prove to be more than stories. The pages are so rich with fairy tale feelings that you’d never realize it’s not an age-old classic. From such lush beginnings, it’s easy to see why Victoria Schwab has become one of the rising queens of fantasy. </p>
+                </div>
+                <div class="btn">Buy for $1.6<br><sup>Click to know more</sup></div>
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://images-cdn.reedsy.com/discovery/image/1038/image/medium_5005f725cf34148c65e0e11fb38ab2bd9de9c0bc.jpg">
+                </div>
+                <div class="content">
+                    <h2>The Poison Within </h2>
+                   <h5>Rachel Marie Pearcy </h5> 
+                    <p><br> An evil queen on the run from assassins and a princess archer living in the woods. It’s a wonder this isn’t a retelling, because it feels so deeply fairy tale you’d think it surely must be. But this royal redemption story is entirely its own creation, and all the richer and more beautiful for it.
+
+Rya, a woman known throughout her kingdom as The Black Queen, escapes to the woods after being accused of a murder she did not commit. It’s there she finds herself in the company of Princess Cam, and both their lives begin to change. A story of salvation and love and the choices we’re forced to make, The Poison Within has all the classic trappings, but with a fresh outlook that makes everything new again.
+
+ </p>
+                </div>
+               <div class="btn">Buy for $1.9<br><sup>Click to know more</sup></div> 
+                </div>
+        
+        <div class="card">
+                <div class="imgbox">
+                    <img src="https://images-cdn.reedsy.com/discovery/image/1039/image/medium_69e7595c9f2975d40fdc6afd16ba84c524c11624.jpg">
+                </div>
+                <div class="content">
+                    <h2>Girls Made of Snow and Glass </h2>
+                   <h5>Melissa Bashardoust</h5> 
+                    <p><br> A gorgeous, glorious retelling of Snow White unlike any we’ve seen before. It’s the story of Mina, a queen with a heart made of glass, and Lynet, a girl built from snow to be the literal image of her dead mother. This feminist tale of their rivalry and the choices they’re forced to make by circumstance will upend everything you thought you knew about one of the most classic fairy tales of all time.
+</p>
+                </div>
+               <div class="btn">Buy for $2.7<br><sup>Click to know more</sup></div> 
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://images-cdn.reedsy.com/discovery/image/1041/image/medium_dd509c2609780a7f002039517a6de327f6b7162e.jpg">
+                </div>
+                <div class="content">
+                    <h2>Thief of Cahraman </h2>
+                   <h5>Lucy Tempest</h5> 
+                    <p><br> Thief of Cahraman is a gender-bent take on Aladdin. In Lucy Tempest's version, the young hero is Adelaide, a thief who's been stolen away by a witch and made to assume the life of a noblewoman in order to enter a competition for the Prince’s hand. Except, oh yeah, the competition is just a way to get inside the palace for a heist, and the cost of failure is certain death. Add in a love story with another charming thief, setups for future retellings of both Cinderella and Beauty and the Beast, and a twist ending that will leave you clamoring for the sequel, and it’s no wonder this book gets such consistently high reviews.</p>
+                </div>
+               <div class="btn">Buy for $2.3<br><sup>Click to know more</sup></div> 
+                </div>
+                <div class="card">
+                <div class="imgbox">
+                    <img src="https://images-cdn.reedsy.com/discovery/image/1043/image/medium_9bb58b2d1b36b6e35c78457f7b4788ea14ab01f9.jpg">
+                </div>
+                <div class="content">
+                    <h2>East </h2>
+                   <h5>Edith Pattou</h5> 
+                    <p><br> While Edith Pattou’s East may feel like it takes its origin from Beauty and the Beast, it comes to us, in fact, from a Norwegian story called East of the Sun, West of the Moon. If you’re not familiar with it, that’s okay — you can still enjoy this lively, multi-POV story about a girl named Rose who gives herself over to a giant white bear in order to save her family from ruin. Fold in a Troll Queen, rich family dynamics, and plenty of mystery and adventure, and you’ve got the makings of a classic. A perfect winter read, with depictions of cold that grip you so hard you’ll want to wrap yourself in a blanket just to shake it.
+
+ </p>
+                </div>
+               <div class="btn">Buy for $2.3<br><sup>Click to know more</sup></div> 
+                </div>
+         </div>       
+    </section>       
+   <section class="quote">
+    <p><span>"</span> Reading is to the mind what exercise is to the body. <span>"</span></p>
+    <cite>~Joseph Addison</cite>
+  
+    </section> 
+    <section class="footer" id="cu">
+      <p class="hh1">Contact Us</p>
+      <div class="conbox" >
+                <input type="text" class="input" placeholder="Name">
+      <input type="text" class="input" placeholder="Email Address">
+      <input type="text" class="input" placeholder="Phone">
+      <input type="text" class="input" placeholder="Subject">
+    
+    
+      <textarea placeholder="Message"></textarea>
+      <div class="snd btn">send</div>
+    </div>
+    <div class="line"></div>
+      <div class="ebox">
+                 <div class="phn">Phone Number:123-456-7890</div> 
+                 <div class="adr"><b>Maggi Services,</b> Ice Cream Mountain, Near Chocolate River</div> 
+                 <div class="time">Time:04:00 am to 01:00am</div> 
+              </div><!--end of eonbox-->
+              
+              <div class="line line2"></div>  
+              <div class="end">Free Delivery By 31st April &nbsp<i class="fa fa-shopping-cart"></i> </div>
+    </section>  
+    
+        </main>
+    
+        <div class="load" id="loading">
+           <div class="bookcover"></div>
+           <div class="book">
+               <div class="bookp p1"></div>
+               <div class="bookp p2"></div>
+               <div class="bookp p3"></div>
+           </div>
+           <div class="text">LOADING...</div>
+       </div> 
+        <script>
+            var pl= document.getElementById("loading"); 
+function loading(){ 
+     pl.style.display="none";
+ } 
+ window.onload =  function(){ 
+ document.getElementById("dora").style.display="block";
+ document.getElementById("loading").style.display="none";};
+        </script>
+        <script>
+            window.addEventListener("load", () => {
+  var buttons = [...document.querySelectorAll('.buy')]
+
+  var productimages = [...document.querySelectorAll('.img')]
+  
+    var ham = document.querySelector('.ham')
+    var list = [...document.querySelectorAll('.list')] 
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", function(e) {
+      
+      var photo = button.parentElement.querySelector('.img');
+      photo.classList.toggle("gscale");
+      
+    })
+
+  })
+  
+  
+    ham.addEventListener("click", function(e) { 
+        
+      var nav = document.querySelector(".list");
+        if (nav.style.display === "none" || nav.style.display=='') {
+            nav.style.display = "block";
+        } else {
+            nav.style.display = "none";
+        }
+      
+    })
+
+
+  
+
+});
+
+        </script>
+    </body>
+</html>
